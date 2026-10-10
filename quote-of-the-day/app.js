@@ -125,7 +125,8 @@
     root.setProperty('--ink', theme.ink);
     root.setProperty('--accent', theme.accent);
     root.setProperty('--bg1', theme.bg[0]);
-    document.querySelector('meta[name="theme-color"]').content = theme.bg[0];
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = theme.bg[0];
     $('theme-name').textContent = `обои дня · ${theme.name}`;
   }
 
